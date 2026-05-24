@@ -1,0 +1,26 @@
+name: MIND GAMES
+category: Challenges
+difficulty: easy
+tags: misc, easy
+description: 99 rounds of basic math... go ahead and ask Claude to solve 2+2
+
+flag: acmxstf{4sc11-ch4rs-g4m3m1nd3d}
+
+docker:
+  image: ascii-mindgames
+  build:
+    context: .
+    dockerfile: Dockerfile
+  ports:
+    - "1337"
+  environment:
+    - PORT=1337
+  container_name: ascii-mindgames-server
+
+connection:
+  type: socket
+  host: localhost
+  port: "{PORT}"
+  protocol: TCP
+
+solver: solve.py

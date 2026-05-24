@@ -1,0 +1,17 @@
+# CTFd / ctf-cli challenge configuration file
+name: "Vault Volt"
+author: "lrc"
+category: "Misc"
+
+description: >
+  Volt-Vault Security prides itself on having the most secure digital vault in the world.
+  However, a short circuit in the central server scrambled the access permissions. You are a digital *lockpicker* hired to test whether, after this short circuit, it is possible to reach the **Master Vault** without keys.
+
+  No keys. No credentials. Only the short circuit. Reach the Master Vault and retrieve the flag.
+
+  Created by lrc
+
+tags:
+  - cloud
+  - misc
+  - medium

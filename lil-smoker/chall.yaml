@@ -1,0 +1,38 @@
+# CTFd / ctf-cli challenge configuration file
+name: "Lil Smoker"
+author: "lrc"
+category: "OSINT"
+
+description: >
+  w3w
+  My friend Tommy was clipped in a frame where we can obviously see him dunking in altinha's 2026 MVP player.
+  Where was the photo taken?
+
+  acmxstf{}
+
+  Created by lrc
+
+hint: >
+  flag format is acmxstf{a.b.c}
+
+tags:
+  - osint
+  - medium
+
+flags:
+- acmxstf{gums.rope.smokers}
+- acmxstf{addicted.elevate.dusts}
+- acmxstf{plotted.avid.gestures}
+- acmxstf{album.triads.bigger}
+- acmxstf{blows.weeks.awesome}
+- acmxstf{lasts.boxing.pounding}
+- acmxstf{string.merit.cactus}
+- acmxstf{hits.fairway.sweeten}
+- acmxstf{gained.escape.symphony}
+- acmxstf{album.triads.bigger}
+- acmxstf{pull.alive.elevated}
+- acmxstf{soon.verbs.shunted}
+- acmxstf{hits.fairway.sweeten}
+
+files:
+  - white_ive.png

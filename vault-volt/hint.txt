@@ -1,0 +1,1 @@
+ACCESS LOG: A short circuit has been detected somewhere in the vault system. The blast radius is unknown.

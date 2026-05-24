@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volt-Vault</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0a0a;
+      color: #ffd700;
+      font-family: 'Courier New', Courier, monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+
+    .tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #867936;
+    }
+
+    hr {
+      width: min(100%, 800px);
+      border: none;
+      border-top: 1px solid #2a2400;
+    }
+
+    pre.logo {
+      font-size: clamp(0.35rem, 1.1vw, 0.72rem);
+      line-height: 1.25;
+      color: #ffd700;
+      white-space: pre;
+      text-align: left;
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #39ff14;
+      flex-shrink: 0;
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 6px #39ff14; }
+      50%       { opacity: 0.25; box-shadow: none; }
+    }
+
+    .endpoint-block {
+      font-size: 0.78rem;
+      color: #867936;
+      text-align: center;
+      line-height: 2;
+    }
+
+    .endpoint-block span {
+      color: #ffd700;
+    }
+
+    .endpoint-block .instruction-text {
+      display: block;
+      margin-top: 1rem;
+      color:  #867936 !important; 
+      font-weight: normal;
+      letter-spacing: 0.05em;
+    }
+
+    .footer {
+      font-size: 0.6rem;
+      color: #867936;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tag">// volt-vault security system //</div>
+
+  <hr>
+
+  <pre class="logo">
+$$\    $$\           $$\   $$\   $$\    $$\                    $$\   $$\
+$$ |   $$ |          $$ |  $$ |  $$ |   $$ |                   $$ |  $$ |
+$$ |   $$ | $$$$$$\  $$ |$$$$$$\ $$ |   $$ |$$$$$$\  $$\   $$\ $$ |$$$$$$\
+\$$\  $$  |$$  __$$\ $$ |\_$$  _|\$$\  $$  |\____$$\ $$ |  $$ |$$ |\_$$  _|
+ \$$\$$  / $$ /  $$ |$$ |  $$ |   \$$\$$  / $$$$$$$ |$$ |  $$ |$$ |  $$ |
+  \$$$  /  $$ |  $$ |$$ |  $$ |$$\ \$$$  / $$  __$$ |$$ |  $$ |$$ |  $$ |$$$\
+   \$  /   \$$$$$$  |$$ |  \$$$$  | \$  /  \$$$$$$$ |\$$$$$$  |$$ |  \$$$$  |
+    \_/     \______/ \__|   \____/   \_/    \_______| \______/ \__|   \____/
+  </pre>
+
+  <hr>
+
+  <div class="status-row">
+    <div class="dot"></div>
+    Instance Online
+  </div>
+
+  <div class="endpoint-block">
+    AWS endpoint &nbsp;→&nbsp; <span id="ep">http://challs-acm.xstf.pt:[Second Port]</span><br>
+    Region &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp; <span>eu-central-1</span>
+
+    <span class="instruction-text">Please connect using the second instance URL provided by CTFd.</span>
+  </div>
+
+  <hr>
+
+  <div class="footer">no keys &nbsp;·&nbsp; no credentials &nbsp;·&nbsp; only the short circuit</div>
+
+  <script>
+    const host = window.location.hostname;
+    document.getElementById('ep').textContent = `http://${host}:[Dynamic Port]`;
+  </script>
+
+</body>
+</html>
