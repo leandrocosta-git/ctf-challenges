@@ -3,3 +3,7 @@ solve*
 .idea/
 *.log
 secret*
+
+flag*
+
+make_chall.py
