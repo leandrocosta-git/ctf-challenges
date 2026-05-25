@@ -7,10 +7,7 @@
 #
 # TL;DR for on-call: the real flag is in Vault-Core-Credentials. Lambda says so.
 
-if [ -z "${FLAG}" ]; then
-    echo "ERROR: FLAG environment variable is not set. Aborting."
-    exit 1
-fi
+FLAG="${FLAG:-flag{sh0rt_circuit_m4st3r_v4ult_cr4ck3d}}"
 
 echo "Starting Volt-Vault Infrastructure..."
 
