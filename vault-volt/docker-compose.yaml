@@ -1,6 +1,6 @@
 services:
     vault-server:
-      image: <registry>/volt-vault:latest
+      image: volt-vault:latest
       container_name: volt_vault_ctf
       ports:
         - "4566:4566"
